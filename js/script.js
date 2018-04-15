@@ -36,7 +36,8 @@ $(document).ready(function () {
 
       span1.textContent = data.results[i].email;
       span1.className = 'spanText';
-      span2.textContent = data.results[i].nat;
+      span2.textContent = data.results[i].location.city.charAt(0).toUpperCase() +
+      data.results[i].location.city.slice(1);
 
       // Inserting the HTML elements onto the index-page
       ul.insertAdjacentElement('beforeend', a);
@@ -94,8 +95,15 @@ $(document).ready(function () {
 
       spanMail.textContent = data.results[index].email;
       spanCountry.textContent = data.results[index].nat;
-      spanNumber.textContent = data.results[index].phone;
-      spanAddress.textContent = data.results[index].location.street;
+      spanNumber.textContent = data.results[index].cell;
+
+      spanAddress.textContent = data.results[index].location.street + ' - '
+
+      + data.results[index].location.city.charAt(0).toUpperCase() +
+      data.results[index].location.city.slice(1) + ' '
+
+      + data.results[index].location.postcode;
+
       spanBirthday.textContent = data.results[index].dob;
     };
 
@@ -140,10 +148,10 @@ $(document).ready(function () {
 
   // AJAX, get the random-user data from API
   $.ajax({
-    url: 'https://randomuser.me/api/?results=12&inc=picture,name,location,email,phone,nat,dob',
+    url: 'https://randomuser.me/api/?results=12&inc=picture,name,location,email,cell,dob,nat,city,postcode',
     dataType: 'json',
     success: function(data) {
-      
+
       profileBlock(data);
       modalBlock(data);
 

@@ -1,0 +1,210 @@
+/* ------------------------------------------------
+   Page Settings
+-------------------------------------------------*/
+
+body {
+  margin: 0;
+  background-color: #FCFCFC;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 2px;
+  color: #4A4A4A;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.page {
+  margin: 0 10%;
+  padding-top: 5px;
+}
+
+.page-header h2 {
+  text-transform: uppercase;
+  padding-left: 15px;
+}
+
+/* ------------------------------------------------
+   Profile Box Settings
+-------------------------------------------------*/
+
+.employee-list {
+  margin: 0;
+  padding: 0;
+}
+
+.employee-item {
+  background-color: #FFFFFF;
+  border: 2px solid #DFDFDF;
+  font-size: 1em;
+  border-radius: 10px;
+  margin: 0 15px 25px 15px;
+  height: 25%;
+  width: 30%;
+  display: inline-block;
+}
+
+.employee-img img {
+  width: 30%;
+  border-radius: 50%;
+  float: left;
+  margin: 6%;
+}
+
+.employee-info {
+  padding-top: 6%;
+  color: #4A4A4A;
+}
+
+.employee-info span {
+  color: #A3A7AA;
+  display: block;
+}
+
+.spanText {
+  display: block;
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.spanBirthdayText {
+  margin: 0 auto;
+  width: 95px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------
+   MODAL BOX Default Settings (copied from 3wschools)
+   https://www.w3schools.com/howto/howto_css_modals.asp
+
+   Slightly modified to fit purpose
+-------------------------------------------------*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #FFFFFF;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 2px solid #DFDFDF;
+    border-radius: 10px;
+    font-size: 1em;
+    width: 400px; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------
+   MODAL BOX Content
+-------------------------------------------------*/
+
+.modal-img {
+  padding-top: 40px;
+}
+
+.modal-img img {
+  width: 250px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.modal-info {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.modal-info span {
+  color: #A3A7AA;
+  display: block;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em auto;
+    padding: 0;
+    width: 80%;
+}
+
+/* ------------------------------------------------
+   MEDIA QUERY
+-------------------------------------------------*/
+
+@media screen and (max-width: 1440px) {
+  .employee-item {
+    height: 145px;
+    width: 346px;
+    font-size: 0.95em;
+  }
+
+  .modal-content {
+    font-size: 0.95em;
+  }
+
+  .modal-img img {
+    width: 200px;
+  }
+
+  .modal-content {
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 1690px) {
+  .employee-item {
+    font-size: 1.05em;
+  }
+  .modal-content {
+    font-size: 1.05em;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .page-header h2 {
+    font-size: 1em;
+  }
+}
